@@ -1,5 +1,6 @@
 package com.joao.bookstore.resources;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,12 @@ public class CategoriaResource {
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Categoria> findById(@PathVariable Long id){
 		Categoria obj = service.findById(id);
+		return ResponseEntity.ok().body(obj);
+	}
+	
+	@GetMapping(value = "/")
+	public ResponseEntity<List<Categoria>> findById(){
+		List<Categoria> obj = service.findAll();
 		return ResponseEntity.ok().body(obj);
 	}
 }
