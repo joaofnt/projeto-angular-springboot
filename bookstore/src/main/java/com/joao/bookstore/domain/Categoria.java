@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
+@Entity(name ="Categoria")
 public class Categoria implements Serializable{
 
 	private static final long serialVersionUID = 1L;
