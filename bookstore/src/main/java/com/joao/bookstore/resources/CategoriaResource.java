@@ -28,7 +28,7 @@ public class CategoriaResource {
 	}
 	
 	@GetMapping(value = "/")
-	public ResponseEntity<List<Categoria>> findById(){
+	public ResponseEntity<List<Categoria>> findAll(){
 		List<Categoria> obj = service.findAll();
 		return ResponseEntity.ok().body(obj);
 	}
